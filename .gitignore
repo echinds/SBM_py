@@ -1,0 +1,8 @@
+# cython compilation outputs
+C_MonteCarlo.c
+C_MonteCarlo.cpython-311-darwin.so
+build/
+
+# miscellaneous other files 
+.ipynb_checkpoints/
+__pycache__/

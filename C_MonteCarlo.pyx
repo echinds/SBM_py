@@ -9,6 +9,7 @@ cimport openmp
 @cython.cdivision(True)
 @cython.boundscheck(False)
 def MC(double[:] w,n:int,l:int, Q:int, delta_T:int, seed:int):
+ 
     cdef int i,m,k,other_pos,pos,cur_aa,dq,new_aa
     cdef double dE,r
     cdef int L=l;
@@ -21,6 +22,7 @@ def MC(double[:] w,n:int,l:int, Q:int, delta_T:int, seed:int):
 
     srand(seed)
     rand()
+
     for i in range(N*L):
         MSA[i] =  <int>(1.0*rand()/(RAND_MAX)*q)
     for m in prange(N,nogil=True,schedule='static'):          
